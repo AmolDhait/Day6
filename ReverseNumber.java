@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public void reverseNumber() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Number : ");
+        int number = scanner.nextInt();
+        int  reverse = 0;
+        while(number != 0)
+        {
+            int remainder = number % 10;
+            reverse = reverse * 10 + remainder;
+            number = number/10;
+        }
+        System.out.println("The reverse of the given number is: " + reverse);
+    }
+    public static void main(String[] args)
+    {
+        ReverseNumber rn = new ReverseNumber();
+        rn.reverseNumber();
+    }
+}
